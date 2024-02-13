@@ -17,7 +17,74 @@ body {
   position: relative;
 }
 
-/* Typography =======================*/
+
+.content-container{
+  width: 85%;
+  margin: auto;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+.content-container img{
+  width: 100px;
+  text-shadow: 30px 30px black 30px;
+}
+.content-container  img:hover{
+  animation: loader 1.25s infinite;
+}
+@keyframes loader {
+  0% {
+    rotate: 360deg;
+  }
+  100% {
+    
+    rotate: 0deg;
+  }
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  
+}
+.navbar ul a{
+  text-decoration: none;
+  font-size: 25px;
+  color: #00b97c;
+  font-weight: 600;
+  font-family: serif;
+}
+
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #962000;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li a:hover{
+  color: #962000;
+}
+.navbar ul li:hover::after{
+  width: 100%;  
+}
+
+
+.content{
+  color: rgb(220, 38, 38);
+  font-size: 3rem;
+  font-family: serif;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+ justify-content: center;
+  text-align: center;
+}
 
 /* Headings */
 
@@ -44,7 +111,8 @@ body {
 }
 
 .inside-page__heading--fullstack,
-.card-front__text-view--fullstack { color: #ff62b2;
+.card-front__text-view--fullstack { 
+  color: #ff62b2;
   
 }
 
@@ -61,7 +129,7 @@ body {
 
 .card-front__tp { color: #fafbfa; }
 
-/* For pricing text on card front cover */
+
 .card-front__text-course {
   font-size: 1.2rem;
   margin-top: -.2rem;
@@ -263,11 +331,19 @@ body {
 }
 
 .card-front__tp--fullstack {
-  /* background: linear-gradient(to bottom, #ff73b9,#ff40a1); */
-  background-image: url();
-  width: 100px;
-  object-fit: cover;
+ background: linear-gradient(to bottom, #ff73b9,#ff40a1);
+ background-size: cover;
+
 }
+.card-front__tp--fullstack img,
+.card-front__tp--aws img,
+.card-front__tp--data img,
+.card-front__tp--tester img {
+  width: 170px;
+  height: auto;
+}
+
+
 
 .card-front__tp--aws {
   background: linear-gradient(
@@ -371,4 +447,8 @@ body {
   color: #fff;
   font-size: 1.2rem;
   text-align: center;
+}
+
+@media screen and (max-width:900px) {
+   
 }
