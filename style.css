@@ -341,6 +341,7 @@ body {
 .card-front__tp--tester img {
   width: 170px;
   height: auto;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
 }
 
 .card-front__tp--aws {
@@ -452,7 +453,6 @@ body {
     height: auto;
   }
 
- 
   .content-container .navbar {
     display: flex;
     flex-direction: column;
@@ -471,5 +471,4 @@ body {
   .content h1 {
     font-size: 25px;
   }
-
 }
